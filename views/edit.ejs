@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <% include ./partials/head %>
+  </head>
+  <body>
+    <header>
+      <% include ./partials/header %>
+    </header>
+    <div class="container">
+      <% var url = "/hobbies/" + hobby.id + "?_method=PUT" %>
+      <form method="POST" action=<%= url %> >
+        <input required name="title" value=<%= hobby.title %> />
+        <a href="/hobbies" class="btn red">Cancel</a>
+        <button class="btn">Save</button>
+      </form>
+    </div>
+  </body>
+</html>
